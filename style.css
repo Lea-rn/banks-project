@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Manrope:wght@200..800&family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+TZ+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiny5&family=Yuji+Mai&display=swap");
+
+/* ////////// navbar //////////////// */
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(234, 231, 231);
+}
+
+* {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-logo {
+  margin: 0px 450px;
+}
+
+header input {
+  width: 100px;
+  padding: 10px 8px;
+  margin: 0px 10px;
+  border-radius: 15px;
+  border: transparent;
+  background-color: white;
+  text-align: center;
+}
+
+.auth-btn {
+  cursor: pointer;
+}
+
+/* //////////// main header //////////////////// */
+
+.main-header {
+  width: 80%;
+  margin: 120px auto 0px auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header h1 {
+  font-size: 45px;
+  font-weight: 500;
+}
+
+/* /////////////////// main-movements //////////////////// */
+
+
+/* ////////////////////////////////////////////left //////////////////////////////  */
+
+.movements-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.left {
+  width: 45%;
+  height: 600px;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 8px;
+}
+.right {
+  border: solid blue;
+  width: 45%;
+  height: 600px;
+}
+
+.deposit-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom: 0.1px solid gray;
+}
+.deposit{
+    margin-right: 8px;
+    background: linear-gradient(to top left , greenyellow  , rgb(142, 232, 6));
+    border-radius: 8px;
+    padding: 4px;
+    font-weight: 600;
+    color: white;
+   
+}
+
+.deposit-info span {
+    font-size: 13px;
+}
+
+.withdraw-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom: 0.1px solid gray;
+}
+.withdraw-info span {
+    font-size: 13px;
+}
+
+.withdraw{
+    margin-right: 8px;
+    background: linear-gradient(to top left , #F66451  , #D5230B);
+    border-radius: 8px;
+    padding: 4px 15px;
+    font-weight: 600;
+    color: white;
+
+}
+
+/* right /////////////////////////////////////// (transfert) ////////////////////////////////////////// */
+
+.transfert-box{
+    border-radius: 10px;
+    width: 70%;
+    margin: 50px auto 10px auto ;
+    height: 150px;
+    background: linear-gradient(to top left , #F1A208 ,#F9C04D );
+    padding: 10px 0px;
+
+}
+.box-title{
+    margin-left: 25px;
+}
+
+.transfert-form input {
+    width: 120px;
+    padding: 5px;
+    margin: 0px 8px 15px 8px;
+    border-radius: 8px;
+    border: transparent;
+}
+
+.transfert-form button {
+    padding: 5px 25px;
+    background-color: white;
+    border: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.transfert-form{
+    position: relative;
+    left: 18px;
+}
+
+.label-amount-transfet{
+    position: relative;
+    left: 105px;
+}
+
+.label-transfert{
+position: relative;
+ left: 30px;
+}

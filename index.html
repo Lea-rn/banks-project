@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./bank-logo.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h4>Log in to get started</h4>
+      <img class="nav-logo" height="60px" src="./logo.png" alt="" />
+      <div class="auth-container">
+        <input placeholder="USER" type="text" />
+        <input placeholder="PIN" type="number" />
+        <span class="auth-btn"><i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </header>
+    <main>
+      <section class="main-header">
+        <div class="current">
+          <h3>Current balance</h3>
+          <p>As of 05/03/2037</p>
+        </div>
+        <h1>0000<i class="fa-solid fa-euro-sign"></i></h1>
+      </section>
+
+      <section class="movements-container">
+        <section class="left">
+          <div class="deposit-container">
+            <div class="deposit-info">
+              <span class="deposit">2 DEPOSIT</span>
+              <span>3 DAYS AGO</span>
+            </div>
+            <p class="deposit-amount">
+              4000 <i class="fa-solid fa-euro-sign"></i>
+            </p>
+          </div>
+
+          <div class="withdraw-container">
+            <div class="withdraw-info">
+              <span class="withdraw">1 withdraw</span>
+              <span>24/01/2037</span>
+            </div>
+            <p class="withrdraw-amount">
+              -378<i class="fa-solid fa-euro-sign"></i>
+            </p>
+          </div>
+        </section>
+        <section class="right">
+            <div class="transfert-box">
+                <h3 class="box-title"> Transfert money</h3>
+                <form class="transfert-form">
+              
+                    <input type="text">
+    
+                    <input type="number">
+                    <button><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="label-container">
+                    <label class="label-transfert">Transfert To</label>
+                    <label class="label-amount-transfet">Amount</label>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
