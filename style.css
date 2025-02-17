@@ -73,9 +73,9 @@ header input {
   border-radius: 8px;
 }
 .right {
-  border: solid blue;
   width: 45%;
   height: 600px;
+  overflow: hidden;
 }
 
 .deposit-container{
@@ -125,11 +125,29 @@ header input {
 .transfert-box{
     border-radius: 10px;
     width: 70%;
-    margin: 50px auto 10px auto ;
+    margin: 25px auto 10px auto ;
     height: 150px;
     background: linear-gradient(to top left , #F1A208 ,#F9C04D );
     padding: 10px 0px;
 
+}
+
+.loan-box {
+  border-radius: 10px;
+  width: 70%;
+  margin: 25px auto 10px auto ;
+  height: 150px;
+  background: linear-gradient(to top left , rgb(37, 177, 37) , greenyellow );
+  padding: 10px 0px;
+}
+
+.close-box{
+  border-radius: 10px;
+  width: 70%;
+  margin: 25px auto 10px auto ;
+  height: 150px;
+  background: linear-gradient(to top left , #d87669  , #f5351b);
+  padding: 10px 0px;
 }
 .box-title{
     margin-left: 25px;
@@ -141,8 +159,26 @@ header input {
     margin: 0px 8px 15px 8px;
     border-radius: 8px;
     border: transparent;
+    background-color: rgba(255, 255, 255, 0.377);
 }
 
+.close-form input {
+  width: 120px;
+  padding: 5px;
+  margin: 0px 8px 15px 8px;
+  border-radius: 8px;
+  border: transparent;
+  background-color: rgba(255, 255, 255, 0.377);
+}
+
+.loan-form input {
+  width: 120px;
+  padding: 5px;
+  margin: 0px 8px 15px 8px;
+  border-radius: 8px;
+  border: transparent;
+  background-color: rgba(255, 255, 255, 0.377);
+}
 .transfert-form button {
     padding: 5px 25px;
     background-color: white;
@@ -151,17 +187,98 @@ header input {
     cursor: pointer;
 }
 
+.close-form button {
+  padding: 5px 25px;
+  background-color: white;
+  border: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.loan-form button {
+  padding: 5px 25px;
+  background-color: white;
+  border: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .transfert-form{
     position: relative;
     left: 18px;
+}
+
+.close-form {
+  position: relative;
+  left: 18px;
+}
+.loan-form {
+  position: relative;
+  left: 18px;
 }
 
 .label-amount-transfet{
     position: relative;
     left: 105px;
 }
-
 .label-transfert{
-position: relative;
- left: 30px;
+  position: relative;
+   left: 30px;
+  }
+
+  .label-user-close{
+    position: relative;
+    left: 30px;
+  }
+
+  .label-pin-close{
+    position: relative;
+    left: 85px;
+  }
+.label-amount-loan {
+  position: relative;
+  left: 45px;
 }
+
+/* /////////////// footer /////////// */
+
+footer {
+  padding: 15px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.euro{
+  margin-right: 15px;
+}
+
+.mov-info-in,.mov-info-out,.mov-info-interest {
+font-size: 11px;
+font-weight: 600;
+}
+
+
+.mov-average-in{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(15, 222, 15);
+}
+.mov-average-out{
+  font-size: 20px;
+  font-weight: 500;
+  color: #D5230B;
+}
+
+.mov-average-interest{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(15, 222, 15);
+}
+
+
+.logged-out-timer{
+  font-weight: bolder;
+}
+

@@ -32,8 +32,11 @@
         </div>
         <h1>0000<i class="fa-solid fa-euro-sign"></i></h1>
       </section>
-
+  <!-- ////////////////// movements ////// -->
       <section class="movements-container">
+        <!-- ///////// left /////////// -->
+
+        
         <section class="left">
           <div class="deposit-container">
             <div class="deposit-info">
@@ -50,11 +53,13 @@
               <span class="withdraw">1 withdraw</span>
               <span>24/01/2037</span>
             </div>
-            <p class="withrdraw-amount">
+            <p class="withdraw-amount">
               -378<i class="fa-solid fa-euro-sign"></i>
             </p>
           </div>
         </section>
+
+        <!-- /////////////// right /////////////// -->
         <section class="right">
             <div class="transfert-box">
                 <h3 class="box-title"> Transfert money</h3>
@@ -71,8 +76,47 @@
                 </form>
 
             </div>
+
+            <div class="loan-box">
+              <h3 class="box-title"> Request Loan</h3>
+              <form class="loan-form">
+  
+                  <input type="number">
+                  <button><i class="fa-solid fa-arrow-right"></i></button>
+                  <div class="label-container">
+                  <label class="label-amount-loan">Amount</label>
+                  </div>
+              </form>
+
+          </div>
+
+
+          <div class="close-box">
+            <h3 class="box-title"> Close Account</h3>
+            <form class="close-form">
+                 <input type="text">
+                <input type="number">
+                <button><i class="fa-solid fa-arrow-right"></i></button>
+                <div class="label-container">
+                <label class="label-user-close">Confirm user</label>
+                <label class="label-pin-close">Confirm pin</label>
+                </div>
+            </form>
+
+        </div>
         </section>
       </section>
+      <footer>
+        <div class="sum-container">
+         <span class="mov-info-in">IN</span> <span class="mov-average-in">0000 <i class="fa-solid fa-euro-sign euro"></i></span> 
+         <span class="mov-info-out">OUT</span> <span class="mov-average-out">0000 <i class="fa-solid fa-euro-sign euro"></i></span> 
+         <span class="mov-info-interest">INTEREST</span> <span class="mov-average-interest">0000 <i class="fa-solid fa-euro-sign euro"></i></span> 
+        </div>
+        <p class="sort"><i class="fa-solid fa-arrow-down-long"></i> SORT</p>
+        <span class="logged-out">YOU WILL BE LOGGED OUT IN <span class="logged-out-timer">5:00</span> </span> 
+      </footer>
     </main>
+
+    <script src="./app.js"></script>
   </body>
 </html>
