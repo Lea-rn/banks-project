@@ -57,3 +57,123 @@ const displayMovements = function (arr) {
 };
 
 displayMovements(account2.movements); //// invocation, run , call ..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////// lectures /////////////////////////////////////////////////////////////
+
+
+/// section : data transformation (ta7wil data , convertir)
+/////// map (return new array : (traja3 array jdid)) :: ///////// 
+
+// const arr = [3,1,4,3,2]
+// console.log(arr)
+
+
+/// with forEach //// 
+// const result = [] ; 
+// arr.forEach(function(ele){
+//   result.push(ele*2)
+// })
+// console.log(result)
+
+///// with map :: 
+// const resultwithMap = arr.map((num)=>num*2)
+// console.log(resultwithMap)
+
+
+////////////////// second exemple :::: 
+
+//// with map ::
+
+// const euro = [100,50,10,5,25]
+// console.log("euro:" , euro)
+// const toTunisianDinar = 3.31 ; 
+
+// const dinar = euro.map((ele)=> ele* toTunisianDinar)
+
+// console.log("dinar :" ,dinar )
+
+// ///// with for loop :: 
+// const euro = [100,50,10,5,25]
+// const toTunisianDinar = 3.31 ;
+// const dinar = []
+// for (let i = 0 ; i<euro.length ; i++) {
+//    dinar.push(euro[i]*toTunisianDinar)
+// }
+// console.log(dinar)
+
+///// third exemple ::: 
+
+// const movements =  [5000, 3400, -150, -790, -3210, 1000, 8500, -30]
+
+//  movements.map((mov,index)=>{
+//   const message = mov > 0 ? "deposit" : "withdraw" ; 
+//   console.log(`movement ${index+1} : you ${message} ${mov}`)
+// })
+
+
+////// .toLowerCase() ==> convertation au miniscule ; 
+////// .toUpperCase() ==> convertation au majiscule ; 
+////  .split() ==> trodlek string array ..
+//////  .join() ===> trodlek array string
+// const user = "SARAH SMITH"    /// ptw 
+
+// const userName1 = user.toLowerCase()   //// park thomas williams
+// console.log(userName1)
+// const userName2 = userName1.split(" ")
+// console.log(userName2)   //////////  ['park', 'thomas', 'williams']
+
+// const userName3 = userName2.map((nom)=> nom[0])
+// console.log(userName3)  //// [p,t,w] ;
+
+
+// const result = userName3.join("") ;
+// console.log(result)
+//// chaining ::: 
+// const result = user.toLowerCase().split(" ").map((ele)=>ele[0]).join("")
+// console.log(result)
+
+
+
+//////// filter /////// 
+// const arr = [3,1,4,3,2,10,2]
+// console.log(arr)
+
+// const numbersGreaterThanTwo = arr.filter((num,i)=>num == 2 )
+
+// console.log(numbersGreaterThanTwo)  // [2]
+
+///// with for loop :: 
+// const arr = [3,1,4,3,2,10,2]
+// console.log(arr)
+// const resultGreaterThanTwo = []
+// for (let i = 0 ; i<arr.length ; i++) {
+//         if (arr[i] > 2){
+//             resultGreaterThanTwo.push(arr[i])
+//         }
+// }
+
+// console.log(resultGreaterThanTwo)
