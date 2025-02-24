@@ -29,13 +29,12 @@ const account4 = {
 };
 
 const accounts = [account1, account2, account3, account4];
-
+////// import element :
 const movementContainer = document.querySelector(".left");
+const balanceAmount = document.querySelector(".amount");
 
-// console.log(movementContainer.innerHTML)
-
+///// display movement ::
 const displayMovements = function (arr) {
-  //// generick function ...
   movementContainer.innerHTML = "";
   arr.forEach((mov, i) => {
     let type = mov > 0 ? "deposit" : "withdraw";
@@ -58,65 +57,60 @@ const displayMovements = function (arr) {
 
 displayMovements(account2.movements); //// invocation, run , call ..
 
+//// display balance ::
 
+//// map ; filter ; sort ; reduce ;
 
+const displayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  balanceAmount.textContent = `${balance}€`;
+};
 
+displayBalance(account2.movements);
 
+// //// function maha (){ // function declaration
+// }
 
+// const maha = function (){   //// function expression
 
+// }
 
+// const maha = ()=>{  arrow function
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// }
 
 ///////////////////////// lectures /////////////////////////////////////////////////////////////
 
-
 /// section : data transformation (ta7wil data , convertir)
-/////// map (return new array : (traja3 array jdid)) :: ///////// 
+/////// map (return new array : (traja3 array jdid)) :: /////////////////////////////////////////////////////////////////
 
 // const arr = [3,1,4,3,2]
 // console.log(arr)
 
-
-/// with forEach //// 
-// const result = [] ; 
+/// with forEach ////
+// const result = [] ;
 // arr.forEach(function(ele){
 //   result.push(ele*2)
 // })
 // console.log(result)
 
-///// with map :: 
+///// with map ::
 // const resultwithMap = arr.map((num)=>num*2)
 // console.log(resultwithMap)
 
-
-////////////////// second exemple :::: 
+////////////////// second exemple ::::
 
 //// with map ::
 
 // const euro = [100,50,10,5,25]
 // console.log("euro:" , euro)
-// const toTunisianDinar = 3.31 ; 
+// const toTunisianDinar = 3.31 ;
 
 // const dinar = euro.map((ele)=> ele* toTunisianDinar)
 
 // console.log("dinar :" ,dinar )
 
-// ///// with for loop :: 
+// ///// with for loop ::
 // const euro = [100,50,10,5,25]
 // const toTunisianDinar = 3.31 ;
 // const dinar = []
@@ -125,21 +119,20 @@ displayMovements(account2.movements); //// invocation, run , call ..
 // }
 // console.log(dinar)
 
-///// third exemple ::: 
+///// third exemple :::
 
 // const movements =  [5000, 3400, -150, -790, -3210, 1000, 8500, -30]
 
 //  movements.map((mov,index)=>{
-//   const message = mov > 0 ? "deposit" : "withdraw" ; 
+//   const message = mov > 0 ? "deposit" : "withdraw" ;
 //   console.log(`movement ${index+1} : you ${message} ${mov}`)
 // })
 
-
-////// .toLowerCase() ==> convertation au miniscule ; 
-////// .toUpperCase() ==> convertation au majiscule ; 
+////// .toLowerCase() ==> convertation au miniscule ;
+////// .toUpperCase() ==> convertation au majiscule ;
 ////  .split() ==> trodlek string array ..
 //////  .join() ===> trodlek array string
-// const user = "SARAH SMITH"    /// ptw 
+// const user = "SARAH SMITH"    /// ptw
 
 // const userName1 = user.toLowerCase()   //// park thomas williams
 // console.log(userName1)
@@ -149,16 +142,13 @@ displayMovements(account2.movements); //// invocation, run , call ..
 // const userName3 = userName2.map((nom)=> nom[0])
 // console.log(userName3)  //// [p,t,w] ;
 
-
 // const result = userName3.join("") ;
 // console.log(result)
-//// chaining ::: 
+//// chaining :::
 // const result = user.toLowerCase().split(" ").map((ele)=>ele[0]).join("")
 // console.log(result)
 
-
-
-//////// filter /////// 
+////////////////////////////////////////////// filter (traja3 array) ////////////////////////////////////////
 // const arr = [3,1,4,3,2,10,2]
 // console.log(arr)
 
@@ -166,7 +156,7 @@ displayMovements(account2.movements); //// invocation, run , call ..
 
 // console.log(numbersGreaterThanTwo)  // [2]
 
-///// with for loop :: 
+///// with for loop ::
 // const arr = [3,1,4,3,2,10,2]
 // console.log(arr)
 // const resultGreaterThanTwo = []
@@ -177,3 +167,83 @@ displayMovements(account2.movements); //// invocation, run , call ..
 // }
 
 // console.log(resultGreaterThanTwo)
+
+//////////////////////////////////// reduce //////////////////////////////////////////////
+
+///// matraja3ch array
+//// accumulator  ===> snow ball ==> start condition
+
+// const numbers = [3,1,4,3,2] /////
+//// sum :
+// const sum = numbers.reduce(function(acc,ele,index){
+//   return acc + ele
+// },0)
+
+///  3+0 ==> 3 ; 3+1 ==> 4 ; 4+4 ==> 8 ; 8+3 ==> 11 ; 11 + 2 = 13 ; acc =13
+
+// console.log(sum)
+
+///// with forEach .....
+// const numbers = [3,1,4,3,2]
+
+// let sum = 0 ;
+// numbers.forEach((ele)=>{
+//   sum += ele ;
+//   /// sum = sum + ele
+
+// })
+// console.log(sum)
+
+// const numbers = [3,1,4,3,2]   //// 72..
+
+// const multiple = numbers.reduce(function(acc,ele){
+//    return ele*acc
+// },1)  // 1*3 ==> 3*1 ==> 3*4 ==> 12 ; 12*3 ==> 36 ; 36*2 ==>72
+// console.log(multiple)
+
+///////// get max using reduce ///
+
+// const y = [50,300,1000,200,2000,10]
+// console.log(y)
+
+// const max = y.reduce(function(acc,num){
+//   console.log(acc)
+//    if (acc > num){
+//     return acc
+//    }
+//    else return num
+// },y[0])
+
+// console.log(max)
+
+//////// chaining -- pipline
+
+const account = [100, -200, 500, -80, 600];
+console.log(account);
+const euroToDinar = 3.3;
+//// sum of deposit on tunisian dinar ...
+
+// //// filter
+
+// const deposit = account.filter((ele) => ele > 0);
+
+// //// map
+
+// const depositToDinar = deposit.map((ele) => ele * euroToDinar);
+
+// //// reduce
+
+// const sum = depositToDinar.reduce((acc, ele) => acc + ele, 0);
+
+// console.log(sum);
+
+// const sum = account.filter((ele)=>ele>0)
+// .map((ele,i,arr)=>{
+//   console.log("result of filter :" , arr)
+//   ele * euroToDinar
+// })
+// .reduce((acc,ele,i,arr)=>{
+//   acc+ele 
+// },0)
+
+// console.log(sum)
