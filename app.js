@@ -29,9 +29,25 @@ const account4 = {
 };
 
 const accounts = [account1, account2, account3, account4];
+
+
 ////// import element :
 const movementContainer = document.querySelector(".left");
 const balanceAmount = document.querySelector(".amount");
+const inComes = document.querySelector(".mov-average-in")
+const outMoney = document.querySelector(".mov-average-out")
+const intrest = document.querySelector(".mov-average-interest")
+
+
+
+
+
+
+
+
+
+
+
 
 ///// display movement ::
 const displayMovements = function (arr) {
@@ -55,11 +71,10 @@ const displayMovements = function (arr) {
   });
 };
 
-displayMovements(account2.movements); //// invocation, run , call ..
+displayMovements(account2.movements);
 
-//// display balance ::
 
-//// map ; filter ; sort ; reduce ;
+////////////// display balance : 
 
 const displayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
@@ -67,6 +82,44 @@ const displayBalance = function (movements) {
 };
 
 displayBalance(account2.movements);
+
+
+///////// display summary ///// : 
+
+const calcDisplaySummary = function (accountMovement){
+  const inc = accountMovement.filter((ele)=> ele > 0)
+   .reduce((acc,ele)=> ele+acc,0)
+  inComes.textContent = `${inc} €` ;  //// display ui (user interface)
+
+  const outc = accountMovement.filter((ele)=> ele<0)
+  .reduce((acc,ele)=> acc+ele ,0) ;
+  outMoney.textContent = `${Math.abs(outc)} €`
+
+  const interstc = accountMovement.filter((mov)=> mov> 0)
+  .map((deposit)=> {
+ 
+   return (deposit*1.5)/100
+  } )
+ .filter((ele)=>ele > 1)
+ .reduce((acc,ele)=>acc+ele ,0)
+ intrest.textContent = `${interstc} € `    ///// update lel ui ; 
+} 
+
+
+
+
+calcDisplaySummary(account2.movements) ; 
+
+
+
+
+
+
+
+
+
+///////////////////////// lectures /////////////////////////////////////////////////////////////
+
 
 // //// function maha (){ // function declaration
 // }
@@ -78,8 +131,6 @@ displayBalance(account2.movements);
 // const maha = ()=>{  arrow function
 
 // }
-
-///////////////////////// lectures /////////////////////////////////////////////////////////////
 
 /// section : data transformation (ta7wil data , convertir)
 /////// map (return new array : (traja3 array jdid)) :: /////////////////////////////////////////////////////////////////
@@ -218,9 +269,9 @@ displayBalance(account2.movements);
 
 //////// chaining -- pipline
 
-const account = [100, -200, 500, -80, 600];
-console.log(account);
-const euroToDinar = 3.3;
+// const account = [100, -200, 500, -80, 600];
+// console.log(account);
+// const euroToDinar = 3.3;
 //// sum of deposit on tunisian dinar ...
 
 // //// filter
@@ -247,3 +298,42 @@ const euroToDinar = 3.3;
 // },0)
 
 // console.log(sum)
+
+
+//////////////////////// find ///////////////////////////////
+
+// const numbers = [10,20,30,40,20] ; 
+
+
+// const result  = numbers.find(function(ele,i){
+//   // console.log("console:" , ele)
+//   return ele === 20 ;
+// })
+
+
+
+// console.log(result)
+
+
+
+// const dataBase = [
+//   {
+//     userName : "nader" , 
+//     image : "photo1"
+//   },
+//   {
+//     userName : "houssem" , 
+//     image : "photo2"
+//   },
+//   {
+//     userName : "khouloud" , 
+//     image : "photo3"
+//   }
+// ]
+
+
+// const x = dataBase.find(function(person){
+// return person.image === "photo3"
+// })
+
+// console.log(x) ; 
