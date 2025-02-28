@@ -288,3 +288,8 @@ font-weight: 600;
 
   margin: 0px 10px;
 }
+
+
+main {
+  opacity: 0;
+}
