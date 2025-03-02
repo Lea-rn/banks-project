@@ -48,6 +48,7 @@ const btnLogin = document.querySelector(".auth-btn")
 const userNameInput = document.querySelector(".userName")
 const pinInput = document.querySelector(".pin")
 const welcomeMessage = document.querySelector(".welcome")
+const app = document.querySelector("main")
 
 
 
@@ -62,9 +63,9 @@ const welcomeMessage = document.querySelector(".welcome")
 
 
 ///// display movement ::
-const displayMovements = function (arr) {
+const displayMovements = function (arr) {  //// array
   movementContainer.innerHTML = "";
-  arr.forEach((mov, i) => {
+  arr.movements.forEach((mov, i) => {
     let type = mov > 0 ? "deposit" : "withdraw";
 
     let html = `
@@ -83,31 +84,31 @@ const displayMovements = function (arr) {
   });
 };
 
-displayMovements(account2.movements);
+// displayMovements(account2.movements);
 
 
 ////////////// display balance : 
 
-const displayBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+const displayBalance = function (account) {
+  const balance = account.movements.reduce((acc, mov) => acc + mov, 0);
   balanceAmount.textContent = `${balance}€`;
 };
 
-displayBalance(account2.movements);
+// displayBalance(account2.movements);
 
 
 ///////// display summary ///// : 
 
-const calcDisplaySummary = function (accountMovement){
-  const inc = accountMovement.filter((ele)=> ele > 0)
+const calcDisplaySummary = function (account){
+  const inc = account.movements.filter((ele)=> ele > 0)
    .reduce((acc,ele)=> ele+acc,0)
   inComes.textContent = `${inc} €` ;  //// display ui (user interface)
 
-  const outc = accountMovement.filter((ele)=> ele<0)
+  const outc = account.movements.filter((ele)=> ele<0)
   .reduce((acc,ele)=> acc+ele ,0) ;
   outMoney.textContent = `${Math.abs(outc)} €`
 
-  const interstc = accountMovement.filter((mov)=> mov> 0)
+  const interstc = account.movements.filter((mov)=> mov> 0)
   .map((deposit)=> {
  
    return (deposit*1.5)/100
@@ -120,7 +121,7 @@ const calcDisplaySummary = function (accountMovement){
 
 
 
-calcDisplaySummary(account2.movements) ; 
+// calcDisplaySummary(account2.movements) ; 
 
 
 //////// userName key functionnality ::: ////// 
@@ -137,7 +138,7 @@ displayUserName(accounts)
 
 
 ////// display login :: ///////////////////// 
-let currentAccount ; 
+let currentAccount ; //// object   //// account1 
 btnLogin.addEventListener("click",function(){
  currentAccount = accounts.find((ele)=>{
   return ele.userName === userNameInput.value //ss
@@ -145,9 +146,14 @@ btnLogin.addEventListener("click",function(){
 console.log(currentAccount)
 
 if (currentAccount.pin === Number(pinInput.value)){
-  welcomeMessage.textContent = `welcome back ${currentAccount.owner.split(" ")[0]}`
+  welcomeMessage.textContent = `welcome back ${currentAccount.owner.split(" ")[0]}` //// sarah smith ==> [sarah,smith] ===> sarah
 }
 
+
+app.style.opacity = 1 ;
+displayMovements(currentAccount)
+displayBalance(currentAccount)
+calcDisplaySummary(currentAccount)
 userNameInput.value = pinInput.value =  "" 
 
 
