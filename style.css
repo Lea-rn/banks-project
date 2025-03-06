@@ -37,6 +37,10 @@ header input {
   cursor: pointer;
 }
 
+.arrow{
+  cursor: pointer;
+}
+
 /* //////////// main header //////////////////// */
 
 .main-header {
@@ -292,4 +296,9 @@ font-weight: 600;
 
 main {
   opacity: 0;
+}
+
+
+.transfert-user,.amount-transfert-input{
+  text-align: center;
 }
