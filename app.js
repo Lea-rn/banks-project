@@ -30,7 +30,7 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
-console.log(accounts);
+// console.log(accounts);
 
 ////// import elements :
 const movementContainer = document.querySelector(".left");
@@ -48,6 +48,11 @@ const app = document.querySelector("main");
 const transfertButton = document.querySelector(".transfert-button");
 const transfertUser = document.querySelector(".transfert-user");
 const amountTransfert = document.querySelector(".amount-transfert-input");
+
+//////// close elements :
+const closeUser = document.querySelector(".close-user");
+const closePin = document.querySelector(".close-pin");
+const closeButton = document.querySelector(".btn-close");
 
 ///// display movement ::
 const displayMovements = function (arr) {
@@ -123,7 +128,7 @@ const displayUserName = function (arr) {
 
 displayUserName(accounts);
 
-function updateUi (current){
+function updateUi(current) {
   displayMovements(current);
   displayBalance(current);
   calcDisplaySummary(current);
@@ -137,15 +142,14 @@ btnLogin.addEventListener("click", function () {
   });
   console.log("current :", currentAccount);
 
-  if (currentAccount.pin === Number(pinInput.value)) {
+  if (currentAccount?.pin === Number(pinInput.value)) {
     welcomeMessage.textContent = `welcome back ${
       currentAccount.owner.split(" ")[0]
     }`; //// sarah smith ==> [sarah,smith] ===> sarah
+    app.style.opacity = 1;
+    updateUi(currentAccount);
+    userNameInput.value = pinInput.value = "";
   }
-
-  app.style.opacity = 1;
-   updateUi(currentAccount)
-  userNameInput.value = pinInput.value = "";
 });
 
 ////// transfert functionnality ::::
@@ -167,10 +171,35 @@ transfertButton.addEventListener("click", function (event) {
   ) {
     currentAccount.movements.push(-amount);
     reciever.movements.push(amount);
-     updateUi(currentAccount) ; 
+    updateUi(currentAccount);
     amountTransfert.value = transfertUser.value = "";
   }
 });
+
+/////// close functionnality :::
+
+closeButton.addEventListener("click", function (event) {
+  event.preventDefault(); ///// na7it el par default mte3ha (eli hiya kent taaml reload lel page)
+  const accountToClose = closeUser.value; /// ms
+  const accountPinToClose = Number(closePin.value);
+
+  if (
+    currentAccount.userName === accountToClose &&
+    currentAccount.pin === accountPinToClose
+  ) {
+    const index = accounts.findIndex((acc) => acc.userName === accountToClose); //// ==> 0
+    accounts.splice(index, 1);
+    app.style.opacity = 0;
+    welcomeMessage.textContent = "Log in to get started";
+  }
+});
+
+
+////// loan :: 
+
+
+//// sort ::: 
+
 
 ///////////////////////// lectures /////////////////////////////////////////////////////////////
 
@@ -383,3 +412,18 @@ transfertButton.addEventListener("click", function (event) {
 // })
 
 // console.log(x) ;
+
+////////////////
+
+/// indexOf()
+// const arr = [1,23,4] ;
+
+// const index = arr.indexOf(23) ;
+// console.log(index)
+
+///// findindex()
+
+// const arr = [1, 23, 4, 23];
+
+// const index = arr.findIndex((ele) => ele === 23);
+// console.log(index);

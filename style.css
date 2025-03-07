@@ -37,7 +37,7 @@ header input {
   cursor: pointer;
 }
 
-.arrow{
+.arrow {
   cursor: pointer;
 }
 
@@ -58,7 +58,6 @@ header input {
 }
 
 /* /////////////////// main-movements //////////////////// */
-
 
 /* ////////////////////////////////////////////left //////////////////////////////  */
 
@@ -82,88 +81,85 @@ header input {
   overflow: hidden;
 }
 
-.deposit-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 15px;
-    border-bottom: 0.1px solid gray;
+.deposit-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  border-bottom: 0.1px solid gray;
 }
-.deposit{
-    margin-right: 8px;
-    background: linear-gradient(to top left , greenyellow  , rgb(142, 232, 6));
-    border-radius: 8px;
-    padding: 4px;
-    font-weight: 600;
-    color: white;
-   
+.deposit {
+  margin-right: 8px;
+  background: linear-gradient(to top left, greenyellow, rgb(142, 232, 6));
+  border-radius: 8px;
+  padding: 4px;
+  font-weight: 600;
+  color: white;
 }
 
 .deposit-info span {
-    font-size: 13px;
+  font-size: 13px;
 }
 
-.withdraw-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 15px;
-    border-bottom: 0.1px solid gray;
+.withdraw-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  border-bottom: 0.1px solid gray;
 }
 .withdraw-info span {
-    font-size: 13px;
+  font-size: 13px;
 }
 
-.withdraw{
-    margin-right: 8px;
-    background: linear-gradient(to top left , #F66451  , #D5230B);
-    border-radius: 8px;
-    padding: 4px 15px;
-    font-weight: 600;
-    color: white;
-
+.withdraw {
+  margin-right: 8px;
+  background: linear-gradient(to top left, #f66451, #d5230b);
+  border-radius: 8px;
+  padding: 4px 15px;
+  font-weight: 600;
+  color: white;
 }
 
 /* right /////////////////////////////////////// (transfert) ////////////////////////////////////////// */
 
-.transfert-box{
-    border-radius: 10px;
-    width: 70%;
-    margin: 25px auto 10px auto ;
-    height: 150px;
-    background: linear-gradient(to top left , #F1A208 ,#F9C04D );
-    padding: 10px 0px;
-
+.transfert-box {
+  border-radius: 10px;
+  width: 70%;
+  margin: 25px auto 10px auto;
+  height: 150px;
+  background: linear-gradient(to top left, #f1a208, #f9c04d);
+  padding: 10px 0px;
 }
 
 .loan-box {
   border-radius: 10px;
   width: 70%;
-  margin: 25px auto 10px auto ;
+  margin: 25px auto 10px auto;
   height: 150px;
-  background: linear-gradient(to top left , rgb(37, 177, 37) , greenyellow );
+  background: linear-gradient(to top left, rgb(37, 177, 37), greenyellow);
   padding: 10px 0px;
 }
 
-.close-box{
+.close-box {
   border-radius: 10px;
   width: 70%;
-  margin: 25px auto 10px auto ;
+  margin: 25px auto 10px auto;
   height: 150px;
-  background: linear-gradient(to top left , #d87669  , #f5351b);
+  background: linear-gradient(to top left, #d87669, #f5351b);
   padding: 10px 0px;
 }
-.box-title{
-    margin-left: 25px;
+.box-title {
+  margin-left: 25px;
 }
 
 .transfert-form input {
-    width: 120px;
-    padding: 5px;
-    margin: 0px 8px 15px 8px;
-    border-radius: 8px;
-    border: transparent;
-    background-color: rgba(255, 255, 255, 0.377);
+  width: 120px;
+  padding: 5px;
+  margin: 0px 8px 15px 8px;
+  border-radius: 8px;
+  border: transparent;
+  background-color: rgba(255, 255, 255, 0.377);
 }
 
 .close-form input {
@@ -184,11 +180,11 @@ header input {
   background-color: rgba(255, 255, 255, 0.377);
 }
 .transfert-form button {
-    padding: 5px 25px;
-    background-color: white;
-    border: transparent;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 5px 25px;
+  background-color: white;
+  border: transparent;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .close-form button {
@@ -207,9 +203,9 @@ header input {
   cursor: pointer;
 }
 
-.transfert-form{
-    position: relative;
-    left: 18px;
+.transfert-form {
+  position: relative;
+  left: 18px;
 }
 
 .close-form {
@@ -221,24 +217,24 @@ header input {
   left: 18px;
 }
 
-.label-amount-transfet{
-    position: relative;
-    left: 105px;
-}
-.label-transfert{
+.label-amount-transfet {
   position: relative;
-   left: 30px;
-  }
+  left: 105px;
+}
+.label-transfert {
+  position: relative;
+  left: 30px;
+}
 
-  .label-user-close{
-    position: relative;
-    left: 30px;
-  }
+.label-user-close {
+  position: relative;
+  left: 30px;
+}
 
-  .label-pin-close{
-    position: relative;
-    left: 85px;
-  }
+.label-pin-close {
+  position: relative;
+  left: 85px;
+}
 .label-amount-loan {
   position: relative;
   left: 45px;
@@ -254,51 +250,49 @@ footer {
   align-items: center;
 }
 
-.euro{
+.euro {
   margin-right: 15px;
 }
 
-.mov-info-in,.mov-info-out,.mov-info-interest {
-font-size: 11px;
-font-weight: 600;
-
+.mov-info-in,
+.mov-info-out,
+.mov-info-interest {
+  font-size: 11px;
+  font-weight: 600;
 }
 
-
-.mov-average-in{
+.mov-average-in {
   font-size: 20px;
   font-weight: 500;
   color: rgb(15, 222, 15);
 }
-.mov-average-out{
+.mov-average-out {
   font-size: 20px;
   font-weight: 500;
-  color: #D5230B;
+  color: #d5230b;
 }
 
-.mov-average-interest{
+.mov-average-interest {
   font-size: 20px;
   font-weight: 500;
   color: rgb(15, 222, 15);
 }
 
-
-.logged-out-timer{
+.logged-out-timer {
   font-weight: bolder;
 }
 
-
-.summury-container{
-
+.summury-container {
   margin: 0px 10px;
 }
-
 
 main {
   opacity: 0;
 }
 
-
-.transfert-user,.amount-transfert-input{
+.transfert-user,
+.amount-transfert-input,
+.close-user,
+.close-pin {
   text-align: center;
 }
