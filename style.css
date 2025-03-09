@@ -293,6 +293,11 @@ main {
 .transfert-user,
 .amount-transfert-input,
 .close-user,
-.close-pin {
+.close-pin,.loan-input {
   text-align: center;
+}
+
+
+.sort{
+  cursor: pointer;
 }

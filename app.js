@@ -54,11 +54,19 @@ const closeUser = document.querySelector(".close-user");
 const closePin = document.querySelector(".close-pin");
 const closeButton = document.querySelector(".btn-close");
 
+////// loan elements :
+const loanInput = document.querySelector(".loan-input");
+const btnLoan = document.querySelector(".loan-btn");
+
+///// sort element :
+
+const sortBtn = document.querySelector(".sort");
+
 ///// display movement ::
-const displayMovements = function (arr) {
-  //// array
+const displayMovements = function (acc , sort=false) {
   movementContainer.innerHTML = "";
-  arr.movements.forEach((mov, i) => {
+  const movs = sort ? acc.movements.slice().sort((a,b)=> a - b) : acc.movements ; 
+     movs.forEach((mov, i) => {
     let type = mov > 0 ? "deposit" : "withdraw";
 
     let html = `
@@ -194,12 +202,27 @@ closeButton.addEventListener("click", function (event) {
   }
 });
 
+////// loan functionnality ::
 
-////// loan :: 
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+  const amount = Number(loanInput.value);
 
+  if (amount > 0 && currentAccount.movements.some((ele) => ele / 10 > amount)) {
+    currentAccount.movements.push(amount);
+    updateUi(currentAccount);
+    loanInput.value = "";
+  }
+});
 
-//// sort ::: 
+//// sort  functionnality  :::
+let sorted = false ; 
 
+sortBtn.addEventListener("click", function () {
+
+displayMovements(currentAccount , !sorted)  
+sorted = !sorted
+});
 
 ///////////////////////// lectures /////////////////////////////////////////////////////////////
 
@@ -427,3 +450,61 @@ closeButton.addEventListener("click", function (event) {
 
 // const index = arr.findIndex((ele) => ele === 23);
 // console.log(index);
+
+//////////  includes  (boolean true or false) :::
+
+const numbres = [10, 22, 50, 100, 150];
+
+// console.log(numbres.includes(110))
+
+///// some and every (bollean true or false)::::
+
+//// some ::
+
+// const result = numbres.some((ele)=> ele > 80)  //// fama number akber me 80 !!!
+// console.log(result)
+
+///// every :::
+
+// const x = numbres.every(function(ele){
+//   return ele > 2
+// })
+
+// console.log(x)
+
+///// function declaration ::
+
+// function multiplybyten (num){
+//   return num*10 ;
+// }
+
+// console.log(multiplybyten(100))
+
+//// function expression ::
+// const multiplybyten = function (num){
+//   return num*10 ;
+// }
+
+// console.log(multiplybyten (5))
+
+///// arrow function :: ====================>>>>>>>>>>>>>>
+
+// const multiplybyten = (num)=>{return  num * 10 }
+
+// console.log(multiplybyten(20))
+
+///// sort ::
+
+// const names = ["khouloud", "nader", "maha", "jalila", "houssem","hamadi"];
+
+
+
+// names.sort() ; 
+// console.log("after :" , names)
+
+// const numbers = [10,50,30,100,0]
+
+// numbers.sort((a,b)=> b - a)
+
+// console.log(numbers)
+
